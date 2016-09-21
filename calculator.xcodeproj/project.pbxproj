@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F12920711D9180F400E6BBB8 /* UIButton+background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12920701D9180F400E6BBB8 /* UIButton+background.swift */; };
+		F12920741D91925600E6BBB8 /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12920731D91925600E6BBB8 /* Equation.swift */; };
 		F1AA870C1D909D8400A8E874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA870B1D909D8400A8E874 /* AppDelegate.swift */; };
 		F1AA870E1D909D8400A8E874 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA870D1D909D8400A8E874 /* CalculatorViewController.swift */; };
 		F1AA87111D909D8400A8E874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AA870F1D909D8400A8E874 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F12920701D9180F400E6BBB8 /* UIButton+background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+background.swift"; sourceTree = "<group>"; };
+		F12920731D91925600E6BBB8 /* Equation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
 		F1AA87081D909D8400A8E874 /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AA870B1D909D8400A8E874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AA870D1D909D8400A8E874 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F129206E1D91755200E6BBB8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA870D1D909D8400A8E874 /* CalculatorViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F129206F1D9180DD00E6BBB8 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				F12920701D9180F400E6BBB8 /* UIButton+background.swift */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
+		F12920721D9191B900E6BBB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F12920731D91925600E6BBB8 /* Equation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F1AA86FF1D909D8300A8E874 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +82,10 @@
 		F1AA870A1D909D8400A8E874 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F129206F1D9180DD00E6BBB8 /* Help */,
+				F12920721D9191B900E6BBB8 /* Model */,
+				F129206E1D91755200E6BBB8 /* Controller */,
 				F1AA870B1D909D8400A8E874 /* AppDelegate.swift */,
-				F1AA870D1D909D8400A8E874 /* CalculatorViewController.swift */,
 				F1AA870F1D909D8400A8E874 /* Main.storyboard */,
 				F1AA87121D909D8400A8E874 /* Assets.xcassets */,
 				F1AA87141D909D8400A8E874 /* LaunchScreen.storyboard */,
@@ -138,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1AA870E1D909D8400A8E874 /* CalculatorViewController.swift in Sources */,
+				F12920711D9180F400E6BBB8 /* UIButton+background.swift in Sources */,
 				F1AA870C1D909D8400A8E874 /* AppDelegate.swift in Sources */,
+				F12920741D91925600E6BBB8 /* Equation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
