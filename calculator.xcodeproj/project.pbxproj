@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F12920711D9180F400E6BBB8 /* UIButton+background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12920701D9180F400E6BBB8 /* UIButton+background.swift */; };
 		F12920741D91925600E6BBB8 /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12920731D91925600E6BBB8 /* Equation.swift */; };
+		F195BE951D9442C800335D64 /* MathParserConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195BE901D9442C800335D64 /* MathParserConstants.swift */; };
+		F195BE961D9442C800335D64 /* MathParserExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195BE911D9442C800335D64 /* MathParserExtensions.swift */; };
+		F195BE981D9442C800335D64 /* MathParserOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195BE931D9442C800335D64 /* MathParserOperators.swift */; };
+		F195BE9A1D9442D700335D64 /* MathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F195BE991D9442D700335D64 /* MathParser.swift */; };
 		F1AA870C1D909D8400A8E874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA870B1D909D8400A8E874 /* AppDelegate.swift */; };
 		F1AA870E1D909D8400A8E874 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA870D1D909D8400A8E874 /* CalculatorViewController.swift */; };
 		F1AA87111D909D8400A8E874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AA870F1D909D8400A8E874 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		F12920701D9180F400E6BBB8 /* UIButton+background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+background.swift"; sourceTree = "<group>"; };
 		F12920731D91925600E6BBB8 /* Equation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
+		F195BE901D9442C800335D64 /* MathParserConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParserConstants.swift; sourceTree = "<group>"; };
+		F195BE911D9442C800335D64 /* MathParserExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParserExtensions.swift; sourceTree = "<group>"; };
+		F195BE931D9442C800335D64 /* MathParserOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParserOperators.swift; sourceTree = "<group>"; };
+		F195BE991D9442D700335D64 /* MathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParser.swift; sourceTree = "<group>"; };
 		F1AA87081D909D8400A8E874 /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AA870B1D909D8400A8E874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AA870D1D909D8400A8E874 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F195BE8E1D94427D00335D64 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				F195BE991D9442D700335D64 /* MathParser.swift */,
+				F195BE901D9442C800335D64 /* MathParserConstants.swift */,
+				F195BE911D9442C800335D64 /* MathParserExtensions.swift */,
+				F195BE931D9442C800335D64 /* MathParserOperators.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		F1AA86FF1D909D8300A8E874 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +101,7 @@
 		F1AA870A1D909D8400A8E874 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				F195BE8E1D94427D00335D64 /* Parser */,
 				F129206F1D9180DD00E6BBB8 /* Help */,
 				F12920721D9191B900E6BBB8 /* Model */,
 				F129206E1D91755200E6BBB8 /* Controller */,
@@ -168,9 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1AA870E1D909D8400A8E874 /* CalculatorViewController.swift in Sources */,
+				F195BE951D9442C800335D64 /* MathParserConstants.swift in Sources */,
 				F12920711D9180F400E6BBB8 /* UIButton+background.swift in Sources */,
+				F195BE9A1D9442D700335D64 /* MathParser.swift in Sources */,
+				F195BE961D9442C800335D64 /* MathParserExtensions.swift in Sources */,
 				F1AA870C1D909D8400A8E874 /* AppDelegate.swift in Sources */,
 				F12920741D91925600E6BBB8 /* Equation.swift in Sources */,
+				F195BE981D9442C800335D64 /* MathParserOperators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

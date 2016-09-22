@@ -20,6 +20,7 @@ class CalculatorViewController: UIViewController {
     }
     
     fileprivate var operations: String = ""
+    fileprivate var expression: Equation = Equation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,9 @@ class CalculatorViewController: UIViewController {
             calculatorButton.setBackgroundColor(color: UIColor.white, forState: .highlighted)
         }
         
-        let eq: Equation = Equation()
-        eq.append(lexem: "")
+        expression.resultHandle = { (result: Double) -> Void in
+            self.resultLabel.text = String(result)
+        }
     }
     
     fileprivate func buttonClickWithTag(tag: Int) {
@@ -63,7 +65,7 @@ class CalculatorViewController: UIViewController {
             operations += ""
         }
         operationsLabel.text = operations
-        
+        expression.calculate(expression: operations.replacingOccurrences(of: " ", with: ""))
     }
     
 }
