@@ -16,11 +16,12 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func calculatorButtonTouchInside(_ sender: UIButton) {
-        buttonClickWithTag(tag: sender.tag)
+        buttonClickWith(tag: sender.tag)
     }
     
     fileprivate var operations: String = ""
-    fileprivate var expression: Equation = Equation()
+    fileprivate var expression: Expression = Expression(from: "")
+    fileprivate var lastResult: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,40 +33,53 @@ class CalculatorViewController: UIViewController {
             calculatorButton.setBackgroundColor(color: UIColor.white, forState: .highlighted)
         }
         
-        expression.resultHandle = { (result: Double) -> Void in
-            self.resultLabel.text = String(result)
+        expression.resultHandle = { (result: Double?, error: CalculateError?) -> Void in
+            if let result = result {
+                self.resultLabel.text = String(result)
+            }
         }
     }
     
-    fileprivate func buttonClickWithTag(tag: Int) {
+    fileprivate func buttonClickWith(tag: Int) {
         switch tag {
         case 0...9:
             operations += String(tag)
+            expression.append(lexem: String(tag))
         case 10:
             operations += "."
+            expression.append(lexem: ".")
         case 11:
             operations += " + "
+            expression.append(lexem: "+")
         case 12:
             operations += " - "
+            expression.append(lexem: "-")
         case 13:
-            operations += " x "
+            operations += " × "
+            expression.append(lexem: "×")
         case 14:
             operations += " ÷ "
+            expression.append(lexem: "÷")
         case 15:
             operations += "^"
+            expression.append(lexem: "^")
         case 16:
             operations += "("
+            expression.append(lexem: "(")
         case 17:
             operations += ")"
+            expression.append(lexem: ")")
         case 18:
+            if (operations == "") { return }
             operations = operations.substring(to: operations.index(operations.endIndex, offsetBy: -1))
+            expression.removeLast()
         case 19:
             operations = ""
+            expression.clear()
         default:
             operations += ""
         }
         operationsLabel.text = operations
-        expression.calculate(expression: operations.replacingOccurrences(of: " ", with: ""))
     }
     
 }
